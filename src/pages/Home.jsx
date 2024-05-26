@@ -7,7 +7,7 @@ const Home = () => {
       <h1 className="text-5xl font-bold">Practice with Hooks</h1>
       <div className="flex gap-4">
         <Link
-          className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-white hover:text-gray-900 focus:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50  "
+          className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-white hover:text-gray-900 focus:outline-none focus-visible:ring-1 focus-visible:ring-gray-950  "
           to={"/use-ref"}
         >
           Learn More
@@ -20,7 +20,7 @@ const Home = () => {
         </Link>
         <Link
           className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-white hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50  "
-          to={"/"}
+          to={"/use-ref"}
         >
           useRef
         </Link>
