@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { IoSearchSharp } from "react-icons/io5";
+import { IoIosArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 const Effect = () => {
   const [users, setUsers] = useState([]);
   const [filtredUsers, setFiltredUsers] = useState([]);
@@ -28,8 +30,17 @@ const Effect = () => {
   return (
     <main className="flex flex-col items-center justify-center  gap-8">
       <h1 className="text-5xl font-bold mb-9">useEffect Hook</h1>
-      <div className="max-w-md mx-auto p-4">
-        <div className="relative mb-8 " onChange={handleChange}>
+      <div className=" max-w-md mx-auto p-4">
+        <div className="mb-8">
+          <Link
+            className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-white hover:text-gray-900 focus:outline-none focus-visible:ring-1 focus-visible:ring-gray-950  "
+            to={"/"}
+          >
+            <IoIosArrowBack />
+            Get back
+          </Link>
+        </div>
+        <div className=" relative mb-8 " onChange={handleChange}>
           <input
             className="w-full rounded-md border border-gray-300 px-4 py-2 pr-10 focus:outline-none"
             placeholder="Search for users"
