@@ -2,16 +2,29 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa6";
-
+import { useRef } from "react";
 const Ref = () => {
+  const headPage = useRef();
+
+  const moveDown = () => {
+    headPage.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <main className="flex flex-col items-center justify-center  gap-8">
       <div className="fixed bottom-8 right-8">
-        <div className="cursor-pointer bg-gray-900 p-2 rounded-full ">
+        <div
+          onClick={moveDown}
+          className="cursor-pointer bg-gray-900 p-2 rounded-full "
+        >
           <FaArrowUp size={30} color="white" />
         </div>
       </div>
-      <h1 className="text-5xl font-bold mb-9">useRef Hook</h1>
+      <h1 ref={headPage} className="text-5xl font-bold mb-9">
+        useRef Hook
+      </h1>
       <div className=" max-w-md mx-auto p-4">
         <div className="mb-8">
           <Link
